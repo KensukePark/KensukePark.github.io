@@ -4,6 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <SCRIPT LANGUAGE="JavaScript">
+  function Frameset(page) {
+  framecode = "<frameset rows='1*'>"
+  + "<frame name=main src='" + page + "'>"
+  + "</frameset>";
+  page = window.open("");
+  page.document.open();
+  page.document.write(framecode);
+  page.document.close();
+  }
+  </script>
 
   <title>ParkHyunWoo's Portfolio</title>
   <meta content="" name="description">
@@ -235,7 +246,7 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="pf1" height="600" width="450">
               <div class="portfolio-links">
-                <a href="portfolio_1_details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="javascript:Frameset('portfolio_1_details.html')" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
